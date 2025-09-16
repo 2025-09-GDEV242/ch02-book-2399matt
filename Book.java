@@ -58,7 +58,11 @@ class Book
      * Method to set the reference number of the book.
      */
     public void setRefNumber(String refNumber){
-        this.refNumber = refNumber;
+        if(refNumber.length() < 3){
+            System.out.println("Reference number must be at least 3 characters.");
+        }else{
+            this.refNumber = refNumber;
+        }
     }
     
     /**
