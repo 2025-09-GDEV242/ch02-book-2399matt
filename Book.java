@@ -84,7 +84,8 @@ class Book
      * -------
      */
     public void printDetails(){
-        System.out.printf("Title: %s\nAuthor: %s\nPages: %d\n", title, author, pages);
+        System.out.printf("Title: %s\nAuthor: %s\nPages: %d\nReference Number: %s\n"
+        , title, author, pages, (refNumber.length() == 0) ? "ZZZ" : refNumber);
     }
 
     // Add the methods here ...
