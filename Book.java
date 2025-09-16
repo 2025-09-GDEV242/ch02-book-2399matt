@@ -13,6 +13,7 @@ class Book
     private String title;
     private String refNumber;
     private int pages;
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -24,6 +25,7 @@ class Book
         title = bookTitle;
         this.pages = pages;
         refNumber = "";
+        borrowed = 0;
     }
     
     /**
@@ -52,6 +54,20 @@ class Book
      */
     public int getPages(){
         return pages;
+    }
+    
+    /**
+     * Method to retrieve the amount of times this book has been borrowed.
+     */
+    public int getBorrowed(){
+        return borrowed;
+    }
+    
+    /**
+     * Method to increment the value of borrowed.
+     */
+    public void borrow(){
+        borrowed++;
     }
     
     /**
@@ -85,11 +101,12 @@ class Book
      * Title:
      * Author:
      * Pages:
+     * Amount of times book has been borrowed: 
      * -------
      */
     public void printDetails(){
-        System.out.printf("Title: %s\nAuthor: %s\nPages: %d\nReference Number: %s\n"
-        , title, author, pages, (refNumber.length() == 0) ? "ZZZ" : refNumber);
+        System.out.printf("Title: %s\nAuthor: %s\nPages: %d\nReference Number: %s\nAmount of times book has been borrowed: %d\n"
+        , title, author, pages, (refNumber.length() == 0) ? "ZZZ" : refNumber, borrowed);
     }
 
     // Add the methods here ...
