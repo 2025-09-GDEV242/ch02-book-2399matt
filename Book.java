@@ -58,6 +58,18 @@ class Book
     public void printTitle(){
         System.out.printf("%s", title);
     }
+    
+    /**
+     * Method to print the details of the book.
+     * -------
+     * Title:
+     * Author:
+     * Pages:
+     * -------
+     */
+    public void printDetails(){
+        System.out.printf("Title: %s\nAuthor: %s\nPages: %d\n", title, author, pages);
+    }
 
     // Add the methods here ...
 }
